@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("customer",[CustomerController::class,'index']);
+Route::get("customers",[CustomerController::class,'index']);
+Route::get("getcustomer/{id}",[CustomerController::class,'getCustomer']);
+//Route::get("list",[UserController::class,'show']);
